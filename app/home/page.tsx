@@ -8,7 +8,7 @@
 import { useState } from "react"
 import { Input } from "@/components/ui/input"
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select"
-import { ProgressBar } from "@/components/ui/progress"
+
 import { Button } from "@/components/ui/button"
 
 export default function Component() {
@@ -70,7 +70,7 @@ export default function Component() {
             <label htmlFor="mood" className="block font-medium mb-2">
               Mood
             </label>
-            <Select id="mood" value={mood} className="w-full" onValueChange={(value) => setMood(value)}>
+            <Select  value={mood} onValueChange={(value) => setMood(value)}>
               <SelectTrigger>
                 <SelectValue placeholder="Select mood" />
               </SelectTrigger>
@@ -88,9 +88,9 @@ export default function Component() {
               Aspect Ratio
             </label>
             <Select
-              id="aspect-ratio"
+              
               value={aspectRatio}
-              className="w-full"
+              
               onValueChange={(value) => setAspectRatio(value)}
             >
               <SelectTrigger>
@@ -119,7 +119,7 @@ export default function Component() {
             <label htmlFor="style" className="block font-medium mb-2">
               Aesthetic Style
             </label>
-            <Select id="style" value={style} className="w-full" onValueChange={(value) => setStyle(value)}>
+            <Select value={style}  onValueChange={(value) => setStyle(value)}>
               <SelectTrigger>
                 <SelectValue placeholder="Select style" />
               </SelectTrigger>
@@ -153,7 +153,7 @@ export default function Component() {
             {images.map((image, index) => (
               <img
                 key={index}
-                src="/placeholder.svg"
+                src="{image}"
                 alt={`Generated image ${index + 1}`}
                 width={400}
                 height={400}
